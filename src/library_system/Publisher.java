@@ -21,15 +21,15 @@ import java.sql.ResultSetMetaData;
 import java.util.Vector;
 import javax.swing.table.DefaultTableModel;
 
-public class Author extends javax.swing.JFrame {
+public class Publisher extends javax.swing.JFrame {
 
     /**
      * Creates new form Category
      */
-    public Author() {
+    public Publisher() {
         initComponents();
         Connect();
-        DisplayAuthorData();
+        DisplayPublisherData();
     }
     
     
@@ -43,18 +43,18 @@ public class Author extends javax.swing.JFrame {
             Class.forName("com.mysql.jdbc.Driver");
             con = DriverManager.getConnection("jdbc:mysql://localhost/library_system","root","");
         } catch (ClassNotFoundException ex) {
-            Logger.getLogger(Author.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Publisher.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
-            Logger.getLogger(Author.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Publisher.class.getName()).log(Level.SEVERE, null, ex);
         }        
     }
     
     // DISPLAY DATA TO JTABLE
-    public void DisplayAuthorData(){
+    public void DisplayPublisherData(){
         int c;
         try {
             // PLOT
-            pst = con.prepareStatement("select * from Author");
+            pst = con.prepareStatement("select * from Publisher");
             rs = pst.executeQuery();
             
             //COLUMN
@@ -62,7 +62,7 @@ public class Author extends javax.swing.JFrame {
             c = rsmd.getColumnCount();
             
             //ROW
-            DefaultTableModel d = (DefaultTableModel)authorTable.getModel();
+            DefaultTableModel d = (DefaultTableModel)publisherTable.getModel();
             d.setRowCount(0);
             
             while(rs.next())
@@ -80,7 +80,7 @@ public class Author extends javax.swing.JFrame {
             } 
             
         } catch (SQLException ex) {
-            Logger.getLogger(Author.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Publisher.class.getName()).log(Level.SEVERE, null, ex);
         }
         
     }
@@ -97,7 +97,7 @@ public class Author extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        authorTable = new javax.swing.JTable();
+        publisherTable = new javax.swing.JTable();
         jLabel2 = new javax.swing.JLabel();
         txtFirstName = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
@@ -118,9 +118,9 @@ public class Author extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 255, 0));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Author");
+        jLabel1.setText("Publisher");
 
-        authorTable.setModel(new javax.swing.table.DefaultTableModel(
+        publisherTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
                 {null, null, null, null, null},
@@ -139,12 +139,12 @@ public class Author extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
-        authorTable.addMouseListener(new java.awt.event.MouseAdapter() {
+        publisherTable.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                authorTableMouseClicked(evt);
+                publisherTableMouseClicked(evt);
             }
         });
-        jScrollPane1.setViewportView(authorTable);
+        jScrollPane1.setViewportView(publisherTable);
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 255, 0));
@@ -315,7 +315,7 @@ public class Author extends javax.swing.JFrame {
         String phone= txtPhone.getText();
         
         try {
-            pst = con.prepareStatement("insert into Author(first_name,last_name,address,phone)values(?,?,?,?)");
+            pst = con.prepareStatement("insert into Publisher(first_name,last_name,address,phone)values(?,?,?,?)");
             pst.setString(1,firstName);
             pst.setString(2,lastName);
             pst.setString(3,address);
@@ -324,28 +324,28 @@ public class Author extends javax.swing.JFrame {
             int k = pst.executeUpdate();
             
             if(k==1){
-                JOptionPane.showMessageDialog(this,"Author Added Succesfully");
+                JOptionPane.showMessageDialog(this,"Publisher Added Succesfully");
                 txtFirstName.setText("");
                 txtLastName.setText("");
                 txtAddress.setText("");
                 txtPhone.setText("");
                 txtFirstName.requestFocus();
-                DisplayAuthorData();
+                DisplayPublisherData();
             }else
             {
                 JOptionPane.showMessageDialog(this,"Error");
             }      
         } catch (SQLException ex)
         {
-            Logger.getLogger(Author.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Publisher.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_addBtnActionPerformed
 
     // TABLE
-    private void authorTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_authorTableMouseClicked
+    private void publisherTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_publisherTableMouseClicked
         // TODO add your handling code here:
-        DefaultTableModel model = (DefaultTableModel)authorTable.getModel();
-        int selectIndex = authorTable.getSelectedRow();
+        DefaultTableModel model = (DefaultTableModel)publisherTable.getModel();
+        int selectIndex = publisherTable.getSelectedRow();
         
         //GET BY ID
         int id = Integer.parseInt(model.getValueAt(selectIndex,0).toString());
@@ -357,14 +357,14 @@ public class Author extends javax.swing.JFrame {
         // RESTRIC ADD BUTTON
         addBtn.setEnabled(false);
         
-    }//GEN-LAST:event_authorTableMouseClicked
+    }//GEN-LAST:event_publisherTableMouseClicked
 
     //UPDATE
     private void updateBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateBtnActionPerformed
         // TODO add your handling code here:
         
-        DefaultTableModel model = (DefaultTableModel)authorTable.getModel();
-        int selectIndex = authorTable.getSelectedRow();
+        DefaultTableModel model = (DefaultTableModel)publisherTable.getModel();
+        int selectIndex = publisherTable.getSelectedRow();
         
         //GET BY ID
         int id = Integer.parseInt(model.getValueAt(selectIndex,0).toString());
@@ -375,7 +375,7 @@ public class Author extends javax.swing.JFrame {
         String phone = txtPhone.getText();
         
         try {
-            pst = con.prepareStatement("update author set first_name = ?, last_name = ?, address = ?, phone = ? where id = ?");
+            pst = con.prepareStatement("update publisher set first_name = ?, last_name = ?, address = ?, phone = ? where id = ?");
             pst.setString(1,firstName);
             pst.setString(2,lastName);
             pst.setString(3,address);
@@ -386,13 +386,13 @@ public class Author extends javax.swing.JFrame {
             int k = pst.executeUpdate();
             
             if(k==1){
-                JOptionPane.showMessageDialog(this,"Author Updated Succesfully");
+                JOptionPane.showMessageDialog(this,"Publisher Updated Succesfully");
                 txtFirstName.setText("");
                 txtLastName.setText("");
                 txtAddress.setText("");
                 txtPhone.setText("");
                 txtFirstName.requestFocus();
-                DisplayAuthorData();
+                DisplayPublisherData();
                 // RESTRICT ADD BUTTON
                 addBtn.setEnabled(true);
             }else
@@ -401,7 +401,7 @@ public class Author extends javax.swing.JFrame {
             }      
         } catch (SQLException ex)
         {
-            Logger.getLogger(Author.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Publisher.class.getName()).log(Level.SEVERE, null, ex);
         }
         
         
@@ -410,28 +410,28 @@ public class Author extends javax.swing.JFrame {
     // DELETE AUTHOR
     private void deleteBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteBtnActionPerformed
         // TODO add your handling code here:
-        DefaultTableModel model = (DefaultTableModel)authorTable.getModel();
-        int selectIndex = authorTable.getSelectedRow();
+        DefaultTableModel model = (DefaultTableModel)publisherTable.getModel();
+        int selectIndex = publisherTable.getSelectedRow();
         
         //GET BY ID
         int id = Integer.parseInt(model.getValueAt(selectIndex,0).toString());
        
         
         try {
-            pst = con.prepareStatement("delete from Author where id = ?");
+            pst = con.prepareStatement("delete from Publisher where id = ?");
             pst.setInt(1,id);
             
             //PRIMARY KEY
             int k = pst.executeUpdate();
             
             if(k==1){
-                JOptionPane.showMessageDialog(this,"Author Deleted Succesfully");
+                JOptionPane.showMessageDialog(this,"Publisher Deleted Succesfully");
                 txtFirstName.setText("");
                 txtLastName.setText("");
                 txtAddress.setText("");
                 txtPhone.setText("");
                 txtFirstName.requestFocus();
-                DisplayAuthorData();
+                DisplayPublisherData();
                 // RESTRICT ADD BUTTON
                 addBtn.setEnabled(true);
             }else
@@ -440,7 +440,7 @@ public class Author extends javax.swing.JFrame {
             }      
         } catch (SQLException ex)
         {
-            Logger.getLogger(Author.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Publisher.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_deleteBtnActionPerformed
 
@@ -470,28 +470,29 @@ public class Author extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Author.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Publisher.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Author.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Publisher.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Author.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Publisher.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Author.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Publisher.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Author().setVisible(true);
+                new Publisher().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addBtn;
-    private javax.swing.JTable authorTable;
     private javax.swing.JButton cancelCategory;
     private javax.swing.JButton deleteBtn;
     private javax.swing.JLabel jLabel1;
@@ -501,6 +502,7 @@ public class Author extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable publisherTable;
     private javax.swing.JTextField txtAddress;
     private javax.swing.JTextField txtFirstName;
     private javax.swing.JTextField txtLastName;

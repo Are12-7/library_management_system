@@ -28,12 +28,12 @@ public class Main extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        bookBtn = new javax.swing.JButton();
         authorBtn = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        publisherBtn = new javax.swing.JButton();
         categoryBtn = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
+        memberBtn = new javax.swing.JButton();
+        borrowBtn = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
 
@@ -46,10 +46,15 @@ public class Main extends javax.swing.JFrame {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("ABC Library");
 
-        jButton1.setBackground(new java.awt.Color(204, 204, 204));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton1.setText("Book");
-        jButton1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(204, 204, 204), new java.awt.Color(204, 204, 204), new java.awt.Color(204, 204, 204), new java.awt.Color(204, 204, 204)));
+        bookBtn.setBackground(new java.awt.Color(204, 204, 204));
+        bookBtn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        bookBtn.setText("Book");
+        bookBtn.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(204, 204, 204), new java.awt.Color(204, 204, 204), new java.awt.Color(204, 204, 204), new java.awt.Color(204, 204, 204)));
+        bookBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bookBtnActionPerformed(evt);
+            }
+        });
 
         authorBtn.setBackground(new java.awt.Color(204, 204, 204));
         authorBtn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -61,10 +66,15 @@ public class Main extends javax.swing.JFrame {
             }
         });
 
-        jButton3.setBackground(new java.awt.Color(204, 204, 204));
-        jButton3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton3.setText("Publisher");
-        jButton3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(204, 204, 204), new java.awt.Color(204, 204, 204), new java.awt.Color(204, 204, 204), new java.awt.Color(204, 204, 204)));
+        publisherBtn.setBackground(new java.awt.Color(204, 204, 204));
+        publisherBtn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        publisherBtn.setText("Publisher");
+        publisherBtn.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(204, 204, 204), new java.awt.Color(204, 204, 204), new java.awt.Color(204, 204, 204), new java.awt.Color(204, 204, 204)));
+        publisherBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                publisherBtnActionPerformed(evt);
+            }
+        });
 
         categoryBtn.setBackground(new java.awt.Color(204, 204, 204));
         categoryBtn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -76,15 +86,25 @@ public class Main extends javax.swing.JFrame {
             }
         });
 
-        jButton5.setBackground(new java.awt.Color(204, 204, 204));
-        jButton5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton5.setText("Member");
-        jButton5.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(204, 204, 204), new java.awt.Color(204, 204, 204), new java.awt.Color(204, 204, 204), new java.awt.Color(204, 204, 204)));
+        memberBtn.setBackground(new java.awt.Color(204, 204, 204));
+        memberBtn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        memberBtn.setText("Member");
+        memberBtn.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(204, 204, 204), new java.awt.Color(204, 204, 204), new java.awt.Color(204, 204, 204), new java.awt.Color(204, 204, 204)));
+        memberBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                memberBtnActionPerformed(evt);
+            }
+        });
 
-        jButton6.setBackground(new java.awt.Color(204, 204, 204));
-        jButton6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton6.setText("Issue Book");
-        jButton6.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(204, 204, 204), new java.awt.Color(204, 204, 204), new java.awt.Color(204, 204, 204), new java.awt.Color(204, 204, 204)));
+        borrowBtn.setBackground(new java.awt.Color(204, 204, 204));
+        borrowBtn.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        borrowBtn.setText("Borrow Book");
+        borrowBtn.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(204, 204, 204), new java.awt.Color(204, 204, 204), new java.awt.Color(204, 204, 204), new java.awt.Color(204, 204, 204)));
+        borrowBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                borrowBtnActionPerformed(evt);
+            }
+        });
 
         jButton7.setBackground(new java.awt.Color(204, 204, 204));
         jButton7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -108,15 +128,15 @@ public class Main extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createSequentialGroup()
                             .addGap(6, 6, 6)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(publisherBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(bookBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(authorBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(jButton8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButton7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 172, Short.MAX_VALUE)
-                        .addComponent(jButton6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(borrowBtn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(memberBtn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(categoryBtn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap(69, Short.MAX_VALUE))
         );
@@ -126,17 +146,17 @@ public class Main extends javax.swing.JFrame {
                 .addGap(25, 25, 25)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(bookBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(authorBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(publisherBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(categoryBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(memberBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(borrowBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -177,6 +197,30 @@ public class Main extends javax.swing.JFrame {
         a.setVisible(true);
     }//GEN-LAST:event_authorBtnActionPerformed
 
+    private void publisherBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_publisherBtnActionPerformed
+        // TODO add your handling code here:
+        Publisher p = new Publisher();
+        p.setVisible(true);
+    }//GEN-LAST:event_publisherBtnActionPerformed
+
+    private void bookBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bookBtnActionPerformed
+        // TODO add your handling code here:
+        Book b = new Book();
+        b.setVisible(true);
+    }//GEN-LAST:event_bookBtnActionPerformed
+
+    private void memberBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_memberBtnActionPerformed
+        // TODO add your handling code here:
+        Member m = new Member();
+        m.setVisible(true);
+    }//GEN-LAST:event_memberBtnActionPerformed
+
+    private void borrowBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_borrowBtnActionPerformed
+        // TODO add your handling code here:
+        BorrowBook bBook = new BorrowBook();
+        bBook.setVisible(true);
+    }//GEN-LAST:event_borrowBtnActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -214,14 +258,14 @@ public class Main extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton authorBtn;
+    private javax.swing.JButton bookBtn;
+    private javax.swing.JButton borrowBtn;
     private javax.swing.JButton categoryBtn;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton memberBtn;
+    private javax.swing.JButton publisherBtn;
     // End of variables declaration//GEN-END:variables
 }

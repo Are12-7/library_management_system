@@ -293,13 +293,13 @@ public class Category extends javax.swing.JFrame {
     // TABLE
     private void categoryTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_categoryTableMouseClicked
         // TODO add your handling code here:
-        DefaultTableModel d2 = (DefaultTableModel)categoryTable.getModel();
+        DefaultTableModel model = (DefaultTableModel)categoryTable.getModel();
         int selectIndex = categoryTable.getSelectedRow();
         
         //GET BY ID
-        int id = Integer.parseInt(d2.getValueAt(selectIndex,0).toString());
-        txtCategory.setText(d2.getValueAt(selectIndex,1).toString());
-        txtStatus.setSelectedItem(d2.getValueAt(selectIndex,2).toString());
+        int id = Integer.parseInt(model.getValueAt(selectIndex,0).toString());
+        txtCategory.setText(model.getValueAt(selectIndex,1).toString());
+        txtStatus.setSelectedItem(model.getValueAt(selectIndex,2).toString());
         
         // RESTRIC ADD BUTTON
         addBtn.setEnabled(false);
@@ -310,11 +310,11 @@ public class Category extends javax.swing.JFrame {
     private void updateBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateBtnActionPerformed
         // TODO add your handling code here:
         
-        DefaultTableModel d2 = (DefaultTableModel)categoryTable.getModel();
+        DefaultTableModel model = (DefaultTableModel)categoryTable.getModel();
         int selectIndex = categoryTable.getSelectedRow();
         
         //GET BY ID
-        int id = Integer.parseInt(d2.getValueAt(selectIndex,0).toString());
+        int id = Integer.parseInt(model.getValueAt(selectIndex,0).toString());
         
         String category = txtCategory.getText();
         String status = txtStatus.getSelectedItem().toString();
@@ -351,11 +351,11 @@ public class Category extends javax.swing.JFrame {
     // DELETE
     private void deleteBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteBtnActionPerformed
         // TODO add your handling code here:
-        DefaultTableModel d2 = (DefaultTableModel)categoryTable.getModel();
+        DefaultTableModel model = (DefaultTableModel)categoryTable.getModel();
         int selectIndex = categoryTable.getSelectedRow();
         
         //GET BY ID
-        int id = Integer.parseInt(d2.getValueAt(selectIndex,0).toString());
+        int id = Integer.parseInt(model.getValueAt(selectIndex,0).toString());
        
         
         try {

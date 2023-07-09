@@ -59,9 +59,9 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jButton3" min="-2" pref="172" max="-2" attributes="0"/>
+                                  <Component id="publisherBtn" min="-2" pref="172" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jButton1" max="32767" attributes="0"/>
+                                      <Component id="bookBtn" max="32767" attributes="0"/>
                                       <Component id="authorBtn" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
@@ -70,8 +70,8 @@
                       <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
                           <Component id="jButton8" alignment="1" max="32767" attributes="0"/>
                           <Component id="jButton7" alignment="1" pref="172" max="32767" attributes="0"/>
-                          <Component id="jButton6" alignment="1" max="32767" attributes="0"/>
-                          <Component id="jButton5" alignment="1" max="32767" attributes="0"/>
+                          <Component id="borrowBtn" alignment="1" max="32767" attributes="0"/>
+                          <Component id="memberBtn" alignment="1" max="32767" attributes="0"/>
                           <Component id="categoryBtn" alignment="1" max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -85,17 +85,17 @@
                   <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="jButton1" min="-2" pref="45" max="-2" attributes="0"/>
+                  <Component id="bookBtn" min="-2" pref="45" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="authorBtn" min="-2" pref="45" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="jButton3" min="-2" pref="45" max="-2" attributes="0"/>
+                  <Component id="publisherBtn" min="-2" pref="45" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="categoryBtn" min="-2" pref="45" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="jButton5" min="-2" pref="45" max="-2" attributes="0"/>
+                  <Component id="memberBtn" min="-2" pref="45" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="jButton6" min="-2" pref="45" max="-2" attributes="0"/>
+                  <Component id="borrowBtn" min="-2" pref="45" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="jButton7" min="-2" pref="45" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -118,7 +118,7 @@
             <Property name="text" type="java.lang.String" value="ABC Library"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton1">
+        <Component class="javax.swing.JButton" name="bookBtn">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="cc" green="cc" red="cc" type="rgb"/>
@@ -138,6 +138,9 @@
               </Border>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bookBtnActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="authorBtn">
           <Properties>
@@ -163,7 +166,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="authorBtnActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton3">
+        <Component class="javax.swing.JButton" name="publisherBtn">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="cc" green="cc" red="cc" type="rgb"/>
@@ -183,6 +186,9 @@
               </Border>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="publisherBtnActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="categoryBtn">
           <Properties>
@@ -208,7 +214,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="categoryBtnActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton5">
+        <Component class="javax.swing.JButton" name="memberBtn">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="cc" green="cc" red="cc" type="rgb"/>
@@ -228,8 +234,11 @@
               </Border>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="memberBtnActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton6">
+        <Component class="javax.swing.JButton" name="borrowBtn">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="cc" green="cc" red="cc" type="rgb"/>
@@ -237,7 +246,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="14" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Issue Book"/>
+            <Property name="text" type="java.lang.String" value="Borrow Book"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
                 <BevelBorder>
@@ -249,6 +258,9 @@
               </Border>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="borrowBtnActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButton7">
           <Properties>

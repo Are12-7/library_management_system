@@ -23,11 +23,7 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="jPanel1" max="32767" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-          </Group>
+          <Component id="jPanel1" alignment="1" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
@@ -52,27 +48,57 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace pref="343" max="32767" attributes="0"/>
+                  <Component id="jLabel1" min="-2" pref="327" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="268" max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          <Component id="jLabel1" min="-2" pref="327" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="197" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtCategory" max="32767" attributes="0"/>
-                              <Component id="jLabel3" max="32767" attributes="0"/>
-                              <Component id="txtStatus" pref="245" max="32767" attributes="0"/>
-                              <Component id="addBtn" max="32767" attributes="0"/>
-                              <Component id="updateBtn" max="32767" attributes="0"/>
-                              <Component id="deleteBtn" max="32767" attributes="0"/>
-                              <Component id="cancelCategory" max="32767" attributes="0"/>
+                  <Component id="jScrollPane1" min="-2" pref="536" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="updateBtn" min="-2" pref="245" max="-2" attributes="0"/>
+                              <Component id="borrowBookBtn" min="-2" pref="245" max="-2" attributes="0"/>
+                              <Component id="deleteBtn" alignment="0" min="-2" pref="245" max="-2" attributes="0"/>
+                              <Component id="cancelCategory" alignment="0" min="-2" pref="245" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="0" pref="65" max="32767" attributes="0"/>
+                          <EmptySpace min="-2" pref="85" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="1" attributes="0">
+                                          <Component id="jLabel4" alignment="0" min="-2" pref="106" max="-2" attributes="0"/>
+                                          <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="jLabel3" min="-2" pref="163" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="txtMName" max="32767" attributes="0"/>
+                              <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="txtRDate" max="32767" attributes="0"/>
+                                  <Component id="txtBDate" max="32767" attributes="0"/>
+                                  <Component id="txtBook" pref="166" max="32767" attributes="0"/>
+                              </Group>
+                              <Component id="txtMemberId" alignment="0" pref="166" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="44" pref="44" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -85,26 +111,44 @@
                   <Component id="jLabel1" min="-2" pref="48" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="txtCategory" min="-2" pref="37" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="jLabel3" min="-2" pref="35" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="txtStatus" min="-2" pref="41" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
-                          <Component id="addBtn" min="-2" pref="45" max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtMemberId" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLabel3" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                              <Component id="txtMName" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="txtBook" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
+                              <Component id="jLabel4" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtBDate" min="-2" pref="35" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtRDate" min="-2" pref="37" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="borrowBookBtn" min="-2" pref="45" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="updateBtn" min="-2" pref="45" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="deleteBtn" min="-2" pref="45" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="cancelCategory" min="-2" pref="45" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
+                      <Component id="jScrollPane1" max="32767" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="32" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -119,7 +163,7 @@
               <Color blue="0" green="ff" red="0" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="Category"/>
+            <Property name="text" type="java.lang.String" value="Borrow Book"/>
           </Properties>
         </Component>
         <Container class="javax.swing.JScrollPane" name="jScrollPane1">
@@ -129,17 +173,29 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JTable" name="categoryTable">
+            <Component class="javax.swing.JTable" name="borrowTable">
               <Properties>
                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                  <Table columnCount="3" rowCount="4">
+                  <Table columnCount="5" rowCount="4">
                     <Column editable="true" title="id" type="java.lang.Integer"/>
-                    <Column editable="true" title="category_name" type="java.lang.Object"/>
-                    <Column editable="true" title="status" type="java.lang.Object"/>
+                    <Column editable="true" title="Member Name" type="java.lang.String"/>
+                    <Column editable="true" title="Book" type="java.lang.String"/>
+                    <Column editable="true" title="Borrow Date" type="java.lang.String"/>
+                    <Column editable="true" title="Return Date" type="java.lang.String"/>
                   </Table>
                 </Property>
                 <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
                   <TableColumnModel selectionModel="0">
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
                     <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                       <Title/>
                       <Editor/>
@@ -162,7 +218,7 @@
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="categoryTableMouseClicked"/>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="borrowTableMouseClicked"/>
               </Events>
             </Component>
           </SubComponents>
@@ -175,10 +231,13 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="ff" red="0" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Category name:"/>
+            <Property name="text" type="java.lang.String" value="Member ID:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtCategory">
+        <Component class="javax.swing.JTextField" name="txtMemberId">
+          <Events>
+            <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtMemberIdKeyPressed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel3">
           <Properties>
@@ -188,28 +247,15 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="ff" red="0" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Status:"/>
+            <Property name="text" type="java.lang.String" value="Member Name:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JComboBox" name="txtStatus">
-          <Properties>
-            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="2">
-                <StringItem index="0" value="Active"/>
-                <StringItem index="1" value="Inactive "/>
-              </StringArray>
-            </Property>
-          </Properties>
-          <AuxValues>
-            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-          </AuxValues>
-        </Component>
-        <Component class="javax.swing.JButton" name="addBtn">
+        <Component class="javax.swing.JButton" name="borrowBookBtn">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="cc" green="cc" red="cc" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="ADD"/>
+            <Property name="text" type="java.lang.String" value="BORROW "/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
                 <BevelBorder/>
@@ -217,7 +263,7 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addBtnActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="borrowBookBtnActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="updateBtn">
@@ -267,6 +313,55 @@
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cancelCategoryActionPerformed"/>
           </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel4">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="20" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="ff" red="0" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Book:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel5">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="20" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="ff" red="0" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Borrow Date:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel6">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="20" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="ff" red="0" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Return Date:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="txtBook">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="0"/>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value=""/>
+          </AuxValues>
+        </Component>
+        <Component class="com.toedter.calendar.JDateChooser" name="txtBDate">
+        </Component>
+        <Component class="com.toedter.calendar.JDateChooser" name="txtRDate">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txtMName">
         </Component>
       </SubComponents>
     </Container>
