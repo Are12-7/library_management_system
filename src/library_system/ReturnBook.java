@@ -111,7 +111,6 @@ public class ReturnBook extends javax.swing.JFrame {
         txtFine = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         returnBookBtn = new javax.swing.JButton();
-        updateBtn = new javax.swing.JButton();
         deleteBtn = new javax.swing.JButton();
         cancelCategory = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
@@ -179,15 +178,6 @@ public class ReturnBook extends javax.swing.JFrame {
         returnBookBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 returnBookBtnActionPerformed(evt);
-            }
-        });
-
-        updateBtn.setBackground(new java.awt.Color(204, 204, 204));
-        updateBtn.setText("UPDATE");
-        updateBtn.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        updateBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                updateBtnActionPerformed(evt);
             }
         });
 
@@ -264,7 +254,6 @@ public class ReturnBook extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(updateBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(returnBookBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(deleteBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(cancelCategory, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -326,14 +315,13 @@ public class ReturnBook extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel9)
                             .addComponent(txtFine, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGap(27, 27, 27)
                         .addComponent(returnBookBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(updateBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGap(18, 18, 18)
                         .addComponent(deleteBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(cancelCategory, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addComponent(cancelCategory, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(30, 30, 30))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 479, Short.MAX_VALUE))
                 .addGap(21, 21, 21))
         );
@@ -427,60 +415,6 @@ public class ReturnBook extends javax.swing.JFrame {
         returnBookBtn.setEnabled(false);
         
     }//GEN-LAST:event_returnTableMouseClicked
-
-    //UPDATE
-    private void updateBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateBtnActionPerformed
-        // TODO add your handling code here:
-        
-        DefaultTableModel model = (DefaultTableModel)returnTable.getModel();
-        int selectIndex = returnTable.getSelectedRow();
-        
-        //GET BY ID
-        int id = Integer.parseInt(model.getValueAt(selectIndex,0).toString());
-        
-        String memberId = txtMemberId.getText();
-        String memberName = txtMName.getText();
-        String bookName = txtBook.getText();
-        String returnDate = txtRDate.getText();
-        String days = txtDays.getText();
-        String fine = txtFine.getText();
-        
-        try {
-            pst = con.prepareStatement("update returnbook set member_id = ?, member_name = ?, book_name = ?, return_date = ?, days = ?, fine = ? where id = ?");
-            pst.setString(1,memberId);
-            pst.setString(2,memberName);
-            pst.setString(3, bookName);
-            pst.setString(4, returnDate);
-            pst.setString(5, days);
-            pst.setString(6, fine);
-            pst.setInt(7,id);
-            
-            //PRIMARY KEY
-            int k = pst.executeUpdate();
-            
-            if(k==1){
-                JOptionPane.showMessageDialog(this," Return Book Succesfully Updated ");
-                txtMemberId.setText("");
-                txtMName.setText("");
-                txtBook.setText("");
-                txtRDate.setText("");
-                txtDays.setText("");
-                txtFine.setText("");
-                txtMemberId.requestFocus();
-                DisplayReturnBookData();
-                // RESTRICT ADD BUTTON
-                returnBookBtn.setEnabled(true);
-            }else
-            {
-                JOptionPane.showMessageDialog(this,"Error");
-            }      
-        } catch (SQLException ex)
-        {
-            Logger.getLogger(ReturnBook.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-        
-    }//GEN-LAST:event_updateBtnActionPerformed
 
     // DELETE AUTHOR
     private void deleteBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteBtnActionPerformed
@@ -670,6 +604,5 @@ public class ReturnBook extends javax.swing.JFrame {
     private javax.swing.JLabel txtMName;
     private javax.swing.JTextField txtMemberId;
     private javax.swing.JLabel txtRDate;
-    private javax.swing.JButton updateBtn;
     // End of variables declaration//GEN-END:variables
 }

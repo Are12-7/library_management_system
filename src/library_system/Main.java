@@ -192,42 +192,49 @@ public class Main extends javax.swing.JFrame {
 
     private void categoryBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_categoryBtnActionPerformed
         // TODO add your handling code here:
+        dispose();
         Category c = new Category();
         c.setVisible(true);
     }//GEN-LAST:event_categoryBtnActionPerformed
 
     private void authorBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_authorBtnActionPerformed
         // TODO add your handling code here:
+        dispose();
         Author a = new Author();
         a.setVisible(true);
     }//GEN-LAST:event_authorBtnActionPerformed
 
     private void publisherBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_publisherBtnActionPerformed
         // TODO add your handling code here:
+        dispose();
         Publisher p = new Publisher();
         p.setVisible(true);
     }//GEN-LAST:event_publisherBtnActionPerformed
 
     private void bookBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bookBtnActionPerformed
         // TODO add your handling code here:
+        dispose();
         Book b = new Book();
         b.setVisible(true);
     }//GEN-LAST:event_bookBtnActionPerformed
 
     private void memberBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_memberBtnActionPerformed
         // TODO add your handling code here:
+        dispose();
         Member m = new Member();
         m.setVisible(true);
     }//GEN-LAST:event_memberBtnActionPerformed
 
     private void borrowBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_borrowBtnActionPerformed
         // TODO add your handling code here:
+        dispose();
         BorrowBook bBook = new BorrowBook();
         bBook.setVisible(true);
     }//GEN-LAST:event_borrowBtnActionPerformed
 
     private void returnBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_returnBtnActionPerformed
         // TODO add your handling code here:
+        dispose();
         ReturnBook rb = new ReturnBook();
         rb.setVisible(true);
     }//GEN-LAST:event_returnBtnActionPerformed
