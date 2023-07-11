@@ -314,6 +314,11 @@ public class Author extends javax.swing.JFrame {
         String address = txtAddress.getText();
         String phone= txtPhone.getText();
         
+        if(firstName.isEmpty() ||lastName.isEmpty()  || address.isEmpty() || phone.isEmpty()){
+            JOptionPane.showMessageDialog(this,"All fields are required");
+        }else{
+            
+        
         try {
             pst = con.prepareStatement("insert into Author(first_name,last_name,address,phone)values(?,?,?,?)");
             pst.setString(1,firstName);
@@ -338,6 +343,7 @@ public class Author extends javax.swing.JFrame {
         } catch (SQLException ex)
         {
             Logger.getLogger(Author.class.getName()).log(Level.SEVERE, null, ex);
+        }
         }
     }//GEN-LAST:event_addBtnActionPerformed
 
@@ -446,7 +452,9 @@ public class Author extends javax.swing.JFrame {
 
     private void cancelCategoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelCategoryActionPerformed
         // TODO add your handling code here:
-        this.setVisible(false);
+        dispose();
+        Main m = new Main();
+        m.setVisible(true);
     }//GEN-LAST:event_cancelCategoryActionPerformed
 
     private void txtAddressActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAddressActionPerformed

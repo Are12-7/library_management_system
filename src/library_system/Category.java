@@ -267,6 +267,12 @@ public class Category extends javax.swing.JFrame {
         String category = txtCategory.getText();
         String status = txtStatus.getSelectedItem().toString();
         
+        if(category.isEmpty() || status.isEmpty()){
+            JOptionPane.showMessageDialog(this,"All fields are required");
+        }else{
+            
+        
+        
         try {
             pst = con.prepareStatement("insert into Category(category_name,status)values(?,?)");
             pst.setString(1,category);
@@ -287,6 +293,7 @@ public class Category extends javax.swing.JFrame {
         } catch (SQLException ex)
         {
             Logger.getLogger(Category.class.getName()).log(Level.SEVERE, null, ex);
+        }
         }
     }//GEN-LAST:event_addBtnActionPerformed
 
@@ -385,7 +392,9 @@ public class Category extends javax.swing.JFrame {
 
     private void cancelCategoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelCategoryActionPerformed
         // TODO add your handling code here:
-        this.setVisible(false);
+        dispose();
+        Main m = new Main();
+        m.setVisible(true);
     }//GEN-LAST:event_cancelCategoryActionPerformed
 
     /**

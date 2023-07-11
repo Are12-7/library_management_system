@@ -435,6 +435,9 @@ public class Book extends javax.swing.JFrame {
         PublisherItem publisherItem = (PublisherItem)txtPublisher.getSelectedItem();
         String edition = txtEdition.getText();
         
+        if(bookName.isEmpty() || authorItem == null  || categoryItem == null || publisherItem == null || edition.isEmpty() ){
+            JOptionPane.showMessageDialog(this,"All fields are required");
+        }
         
         
         try {
@@ -575,7 +578,9 @@ public class Book extends javax.swing.JFrame {
 
     private void cancelCategoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelCategoryActionPerformed
         // TODO add your handling code here:
-        this.setVisible(false);
+        dispose();
+        Main m = new Main();
+        m.setVisible(true);
     }//GEN-LAST:event_cancelCategoryActionPerformed
 
     /**

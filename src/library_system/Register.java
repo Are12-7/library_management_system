@@ -4,6 +4,8 @@
  */
 package library_system;
 
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -369,6 +371,8 @@ public class Register extends javax.swing.JFrame {
         }
         
     }
+    
+
     
     // Check if user already exists
     public boolean checkEmail(String email )
